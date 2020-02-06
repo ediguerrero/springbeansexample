@@ -1,15 +1,20 @@
-import facade.implementation.Facade;
+package controller;
+
+import facade.IFacade;
+import facade.impl.DefaultIFacade;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class usar {
+public class Controller {
 
 
     public static void main(String[]args){ ApplicationContext context = new ClassPathXmlApplicationContext("spring1.xml");
 
-    Facade obj = (Facade) context.getBean("cosa2");
+    IFacade obj = (DefaultIFacade) context.getBean("cosa2");
 
-    obj.getBcart().metY(); }
+    System.out.println(obj.mycart());
+
+    }
 
 
 }

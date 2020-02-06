@@ -3,13 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <alias name="defaultCart" alias="cosa1"></alias>
-    <bean id="defaultCart" class="service.implementation.DefaultCart">
+    <bean id="defaultCart" class="service.impl.DefaultACartService">
 </bean>
     <alias name="defaultPepe" alias="cosa1"></alias>
-    <bean id="defaultPepe" class="service.implementation.DefaultPepe"></bean>
+    <bean id="defaultPepe" class="service.impl.DefaultBCartService"></bean>
 
     <alias name="Facade" alias="cosa2"></alias>
-    <bean id="Facade" class="facade.implementation.Facade">
+    <bean id="Facade" class="facade.impl.DefaultIFacade">
         <property name="bcart" ref="cosa1"></property>
 
 
